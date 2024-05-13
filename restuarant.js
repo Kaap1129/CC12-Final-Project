@@ -1,4 +1,4 @@
-// products data
+/ products data
 const products = [
     { id: 1, name: 'Burger', price: 10.99, image: 'burger.jpg' },
     { id: 2, name: 'Pizza', price: 15.99, image: 'pizza.jpg' },
@@ -79,3 +79,30 @@ document.getElementById('checkout').addEventListener('click', () => {
     console.log('Checkout clicked!');
     // TO DO: implement payment processing logic here
 });
+
+const checkoutButton = document.getElementById('checkout');
+checkoutButton.addEventListener('click', async () => {
+    const response = await fetch('/create-payment', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ cart })
+    });
+    const { orderId } = await response.json();
+});
+
+
+    const mysql = require('mysql');
+
+    const connection = mysql.createConnection({
+      host: 'localhost',
+      user: 'your_username',
+      password: 'your_password',
+      database: 'your_database'
+    });
+    
+    connection.connect((err) => {
+      if (err) throw err;
+      console.log('Connected to MySQL database!');
+    });
