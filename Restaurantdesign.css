@@ -31,15 +31,18 @@
     box-sizing: border-box;
     padding: 10px;
   }
-  
+
   .product-list ul li img {
-    width: 100%;
-    height: auto;
+    background-color: #f2f2f2; /* Change this to the desired background color */
+    width: 150px; /* Set the width of the images */
+    height: 150px; /* Set the height of the images */
+    object-fit: cover; /* Ensure the images are scaled to fit the container */
+    border-radius: 10px; /* Add a border radius to the images (optional) */
   }
   
   .cart {
     float: right;
-    width: 50%;
+    width: 40%;
   }
   
   .cart ul {
@@ -54,6 +57,22 @@
   #total {
     font-weight: bold;
     margin-top: 20px;
+  }
+  
+  #cancel-order {
+    margin-top: 20px;
+  }
+  
+  #cancel-order button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #cancel-order button:hover {
+    background-color: #da190b;
   }
   
   #checkout {
