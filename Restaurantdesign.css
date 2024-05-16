@@ -1,94 +1,69 @@
-body {
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 30px;
-}
-
-.product-list { /* kani ga hatag og border sa menu og gapa isbog sa mga box sa sulod*/
-    width: 100%;
-    border: 1px solid #ccc;
-    padding: 100px;
-    list-style: none;
-    margin: 10px;
-    display: inline;
-    justify-content: center;
-    padding: 10px;
-    list-style: none;
-    margin: 0;
-}
-
-.product-list li { /* kani ga edit sa border sa box para image*/
-	width: 150px;
-	height: 200px;
-	background-color: #f2f2f2;
-	border-radius: 5px;
-	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-	display: flex;
-    flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-	padding: 10px;
-	margin-bottom: 10px;
-	border: 1px solid #ccc;
+* {
+    box-sizing: border-box;
   }
-
-  .product-list img { /* kani ga edit sa image sulod sa box */
-    width: 150px;
-    height: 100px; 
-    margin: 1spx; 
-    border-radius: 1px; 
-}
   
-  .product-name {
-	width: 200px;
-	height: 50px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	padding-left: 10px;
-  }
-
-.cart {
-    width: 30%;
-    border: 1px solid #ccc;
-    padding: 20px;
-}
-
-#product-list, #cart-list {
-    list-style: none;
-    padding: 0;
+  body {
+    font-family: Arial, sans-serif;
     margin: 0;
-}
-
-#product-list li, #cart-list li {
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .product-list {
+    float: left;
+    width: 50%;
+  }
+  
+  .product-list ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .product-list ul li {
+    width: 33.33%;
+    box-sizing: border-box;
     padding: 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-#product-list li:hover, #cart-list li:hover {
-    background-color: #f0f0f0;
-}
-
-#total {
+  }
+  
+  .product-list ul li img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .cart {
+    float: right;
+    width: 50%;
+  }
+  
+  .cart ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cart ul li {
+    margin-bottom: 10px;
+  }
+  
+  #total {
     font-weight: bold;
-    font-size: 18px;
     margin-top: 20px;
-}
-
-#checkout {
+  }
+  
+  #checkout {
     background-color: #4CAF50;
-    color: #fff;
+    color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-}
-
-#checkout:hover {
-    background-color: #3e8e41;
-}
+  }
+  
+  #checkout:hover {
+    background-color: #45a049;
+  }
